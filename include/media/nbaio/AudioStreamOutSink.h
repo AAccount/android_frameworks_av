@@ -51,9 +51,11 @@ public:
     // getNextWriteTimestamp method is simply a passthru to the HAL's underlying
     // implementation of GNWT (if any)
     virtual status_t getNextWriteTimestamp(int64_t *timestamp);
+//same deal here for reject omni's pre_kitkat_blob 
 #ifndef ICS_AUDIO_BLOB
     virtual status_t getTimestamp(AudioTimestamp& timestamp);
 #endif
+
     // NBAIO_Sink end
 
 #if 0   // until necessary

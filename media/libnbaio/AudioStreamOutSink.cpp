@@ -81,8 +81,10 @@ status_t AudioStreamOutSink::getNextWriteTimestamp(int64_t *timestamp) {
     return INVALID_OPERATION;
 #endif
 }
+
 #ifndef ICS_AUDIO_BLOB
 //annoying_blob_stuff
+//reject omni's have pre_kitkat_blob flag because if you think about it ics_audio_blob implies it's pre kitkat :-p
 status_t AudioStreamOutSink::getTimestamp(AudioTimestamp& timestamp)
 {
     if (mStream->get_presentation_position == NULL) {
